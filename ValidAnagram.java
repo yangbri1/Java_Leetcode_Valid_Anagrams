@@ -18,8 +18,15 @@ class Solution {
 
     public static void main(String[] args){
 
-        boolean result = isAnagram("hello", "hello");
+        // create an instance of 'Solution' class --- since this is a non-static method so 'new' required, not able to direct cal
+        Solution solution = new Solution();
 
+        // dot call 'isAnagram()' method within 'Solution' class ...
+        // Note: Remember each data is separate from each instance --- data persists in static
+        boolean result = solution.isAnagram("hello", "hello");
+        // boolean result = isAnagram("hello", "hello");
+
+        // output the results
         System.out.println(result);
     }
 }
